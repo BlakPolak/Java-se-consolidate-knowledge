@@ -5,6 +5,7 @@ import com.codecool.krk20161.javase.exception.AlreadyInCatalogException;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class Catalog {
 
@@ -30,5 +31,8 @@ public class Catalog {
         }catch (AlreadyInCatalogException e){
             e.getMessage("This book is already in catalog, you can not add it");
         }
+    }
+
+    public List<Book> searchByTitle(String s) {
     }
 }
