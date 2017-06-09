@@ -35,4 +35,7 @@ public class Catalog {
 
     public List<Book> searchByTitle(String s) {
     }
+
+    public List<Book> searchByAuthor(Author author) {
+    }
 }
