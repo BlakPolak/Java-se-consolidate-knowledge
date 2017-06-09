@@ -23,6 +23,13 @@ public class Reader {
     public String getName() {
         return name;
     }
+    public List<Book> searchByTitle(String title) {
+        return null;
+
+    }
+    public List<Book> searchByAuthor(Author author) {
+        return null;
+    }
 
 
 }
