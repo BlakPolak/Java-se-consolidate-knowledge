@@ -9,9 +9,11 @@ import java.util.List;
 
 public class Catalog {
 
-    private ArrayList<Book> books;
+    public ArrayList<Book> books;
+    Iterator catalogIterator;
 
     public Catalog(){
+        this.catalogIterator = books.iterator();
     }
     
     public ArrayList<Book> getBooks() {
@@ -20,7 +22,6 @@ public class Catalog {
 
     public void add(Book book){
         try{
-            Iterator catalogIterator = books.iterator();
             while (catalogIterator.hasNext()) {
                 Book bookInCatalog = (Book) catalogIterator.next();
                 if (book.equals(bookInCatalog)){
@@ -33,12 +34,25 @@ public class Catalog {
         }
     }
 
-    public List<Book> searchByTitle(String s) {
+    public List<Book> searchByTitle(String bookTittle) {
+        List<Book> searchedBook = new ArrayList<>();
+        while (catalogIterator.hasNext()) {
+            Book bookInCatalog = (Book) catalogIterator.next();
+            if (bookInCatalog.getTitle().equals(bookTittle)) {
+                searchedBook.add(bookInCatalog);
+                return searchedBook;
+            }
+        }
+        return searchedBook;
     }
 
     public List<Book> searchByAuthor(Author author) {
+        return null;
     }
+
 
     public void remove(Book bookToRemove) {
     }
+
+
 }
