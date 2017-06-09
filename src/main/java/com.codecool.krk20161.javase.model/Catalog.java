@@ -38,4 +38,7 @@ public class Catalog {
 
     public List<Book> searchByAuthor(Author author) {
     }
+
+    public void remove(Book bookToRemove) {
+    }
 }
