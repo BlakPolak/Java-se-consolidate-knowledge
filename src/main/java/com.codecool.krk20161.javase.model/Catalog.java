@@ -13,6 +13,7 @@ public class Catalog {
     public ArrayList<Book> getBooks() {
         return books;
     }
-
+    public void add(Book book) {
+    }
 
 }
