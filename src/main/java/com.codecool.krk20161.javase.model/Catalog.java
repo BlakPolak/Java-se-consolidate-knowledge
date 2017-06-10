@@ -48,7 +48,13 @@ public class Catalog implements Search{
 
     @Override
     public List<Book> searchByAuthor(Author author) {
-        return null;
+        List<Book> searchedBook = new ArrayList<>();
+        for (Book bookInCatalog : books) {
+            if ((author.getName()).equals(bookInCatalog.getAuthor().getName())){
+                searchedBook.add(bookInCatalog);
+            }
+        }
+        return searchedBook;
     }
 
 
