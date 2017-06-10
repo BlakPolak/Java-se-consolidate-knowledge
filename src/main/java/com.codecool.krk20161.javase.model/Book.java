@@ -3,9 +3,9 @@ package com.codecool.krk20161.javase.model;
 
 public class Book {
 
-    private String title;
-    private final Author author;
-    private String summary;
+    public String title;
+    public Author author;
+    public String summary;
 
     public Book(String title, Author author, String summary) {
         this.title = title;
