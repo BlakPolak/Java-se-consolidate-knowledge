@@ -4,7 +4,6 @@ package com.codecool.krk20161.javase.model;
 import com.codecool.krk20161.javase.exception.AlreadyInCatalogException;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class Catalog implements Search{
@@ -38,11 +37,9 @@ public class Catalog implements Search{
     @Override
     public List<Book> searchByTitle(String bookTittle) {
         List<Book> searchedBook = new ArrayList<>();
-        while (catalogIterator.hasNext()) {
-            Book bookInCatalog = (Book) catalogIterator.next();
-            if (bookInCatalog.getTitle().equals(bookTittle)) {
+        for (Book bookInCatalog : books) {
+            if ((bookTittle).equals(bookInCatalog.getTitle())){
                 searchedBook.add(bookInCatalog);
-                return searchedBook;
             }
         }
         return searchedBook;
