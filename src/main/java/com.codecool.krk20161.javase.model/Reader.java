@@ -4,7 +4,7 @@ package com.codecool.krk20161.javase.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Reader {
+public class Reader implements Search {
     String name;
     List<Book> read = new ArrayList<Book>();
     public Reader(String name){
