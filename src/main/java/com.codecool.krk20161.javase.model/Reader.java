@@ -26,13 +26,31 @@ public class Reader implements Search {
     public String getName() {
         return name;
     }
-    public List<Book> searchByTitle(String title) {
-        return null;
 
+    @Override
+    public List<Book> searchByTitle(String title) {
+        List<Book> searchedBook = new ArrayList<>();
+        while (readerIterator.hasNext()) {
+            Book bookInReader = (Book) readerIterator.next();
+            if (bookInReader.getTitle().equals(title)) {
+                searchedBook.add(bookInReader);
+                return searchedBook;
+            }
+        }
+        return searchedBook;
     }
+
+    @Override
     public List<Book> searchByAuthor(Author author) {
-        return null;
-    }
+        List<Book> searchedBook = new ArrayList<>();
+        while (readerIterator.hasNext()) {
+            Book bookInCatalog = (Book) readerIterator.next();
+            if (bookInCatalog.getAuthor().getName().equals(author.getName())) {
+                searchedBook.add(bookInCatalog);
+                return searchedBook;
+            }
+        }
+        return searchedBook;
 
 
 }
