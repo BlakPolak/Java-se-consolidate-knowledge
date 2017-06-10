@@ -21,16 +21,15 @@ public class Catalog implements Search{
 
     public void add(Book book) throws AlreadyInCatalogException {
         try{
-            while (catalogIterator.hasNext()) {
-                Book bookInCatalog = (Book) catalogIterator.next();
-                if (book.equals(bookInCatalog)){
+            for (Book bookInCatalog : books) {
+                if ((book.getTitle()).equals(bookInCatalog.getTitle())){
                     throw new Exception();
                 }
             }
-            books.add(book);
         }catch (Exception e){
             throw new AlreadyInCatalogException("This book is already in catalog, you can not add it");
         }
+        books.add(book);
     }
 
     public void remove(Book bookToRemove) {
