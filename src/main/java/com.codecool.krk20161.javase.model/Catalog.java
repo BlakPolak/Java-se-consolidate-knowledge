@@ -10,11 +10,9 @@ import java.util.List;
 public class Catalog implements Search{
 
     public ArrayList<Book> books;
-    Iterator catalogIterator;
 
     public Catalog(){
         this.books = new ArrayList<>();
-        this.catalogIterator = books.iterator();
     }
     
     public ArrayList<Book> getBooks() {
