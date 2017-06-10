@@ -32,6 +32,12 @@ public class Catalog implements Search{
     }
 
     public void remove(Book bookToRemove) {
+        for (Book bookInCatalog : books) {
+            if ((bookToRemove.getTitle()).equals(bookInCatalog.getTitle())){
+                if ((bookToRemove.getAuthor().getName()).equals(bookInCatalog.getAuthor().getName()))
+                books.remove(bookInCatalog);
+            }
+        }
     }
 
     @Override
