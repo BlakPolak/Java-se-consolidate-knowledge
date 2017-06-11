@@ -1,5 +1,6 @@
 package com.codecool.krk20161.javase.model;
 
+import com.codecool.krk20161.javase.controller.Catalog;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

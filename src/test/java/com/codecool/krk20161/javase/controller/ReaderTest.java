@@ -1,5 +1,7 @@
-package com.codecool.krk20161.javase.model;
+package com.codecool.krk20161.javase.controller;
 
+import com.codecool.krk20161.javase.model.Author;
+import com.codecool.krk20161.javase.model.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -9,7 +11,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertSame;
 
 class ReaderTest {
 
