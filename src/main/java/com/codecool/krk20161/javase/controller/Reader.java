@@ -1,10 +1,14 @@
-package com.codecool.krk20161.javase.model;
+package com.codecool.krk20161.javase.controller;
 
+
+import com.codecool.krk20161.javase.model.Author;
+import com.codecool.krk20161.javase.model.Book;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Reader implements Search {
+
     String name;
     List<Book> read = new ArrayList<Book>();
 

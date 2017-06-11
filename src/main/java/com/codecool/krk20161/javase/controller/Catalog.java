@@ -1,12 +1,14 @@
-package com.codecool.krk20161.javase.model;
+package com.codecool.krk20161.javase.controller;
 
 
 import com.codecool.krk20161.javase.exception.AlreadyInCatalogException;
+import com.codecool.krk20161.javase.model.Author;
+import com.codecool.krk20161.javase.model.Book;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Catalog implements Search{
+public class Catalog implements Search {
 
     public ArrayList<Book> books;
 
@@ -25,7 +27,7 @@ public class Catalog implements Search{
                     throw new Exception();
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e ){
             throw new AlreadyInCatalogException("This book is already in catalog, you can not add it");
         }
         books.add(book);
@@ -51,7 +53,6 @@ public class Catalog implements Search{
         return searchedBook;
     }
 
-
     @Override
     public List<Book> searchByAuthor(Author author) {
         List<Book> searchedBook = new ArrayList<>();
@@ -62,6 +63,4 @@ public class Catalog implements Search{
         }
         return searchedBook;
     }
-
-
 }
