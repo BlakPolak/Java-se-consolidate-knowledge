@@ -1,18 +1,17 @@
 package com.codecool.krk20161.javase.model;
 
 
-public class Author {
+public class Author extends Person {
 
-    private String name;
     private String biography;
 
     public Author(String name, String biography) {
-        this.name = name;
+        super(name);
         this.biography = biography;
     }
 
     public Author(String name) {
-        this.name = name;
+        super(name);
     }
 
     public String getBiography() {
@@ -20,7 +19,7 @@ public class Author {
     }
 
     public String getName() {
-        return name;
+        return super.getName();
     }
 
     public void setBiography(String biography) {

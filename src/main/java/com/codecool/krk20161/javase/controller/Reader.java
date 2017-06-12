@@ -3,20 +3,22 @@ package com.codecool.krk20161.javase.controller;
 
 import com.codecool.krk20161.javase.model.Author;
 import com.codecool.krk20161.javase.model.Book;
+import com.codecool.krk20161.javase.model.Person;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Reader implements Search {
+public class Reader extends Person implements Search  {
 
-    String name;
+
     List<Book> read = new ArrayList<Book>();
 
     public Reader(String name){
-        this.name = name;
+        super(name);
     }
+
     public Reader(String name, List<Book> read) {
-        this.name = name;
+        super(name);
         this.read = read;
     }
 
@@ -25,7 +27,7 @@ public class Reader implements Search {
     }
 
     public String getName() {
-        return name;
+        return super.getName();
     }
 
     @Override
